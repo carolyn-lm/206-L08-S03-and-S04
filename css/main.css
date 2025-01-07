@@ -52,6 +52,7 @@ header .donate-link {
   padding: 10px 30px;
   color: white;
   /* add align-self; flex-end; to overwrite align-items: center; from the parent container */
+  align-self: flex-end;
   border-radius: 5px;
 }
 
@@ -101,6 +102,7 @@ main .content-wrapper {
 
 .main-content-wrapper {
   max-width: 800px;
+  flex-grow: 1;
 }
 
 .main-content-wrapper h2 {
@@ -150,6 +152,8 @@ aside {
   justify-content: center;
   background-color: #f0f8ff;
   padding: 50px 0;
+  flex: 0 0 300px;
+  align-self: flex-start;
 }
 
 .aside-content-wrapper {
@@ -234,12 +238,12 @@ footer img {
 
   .about-text {
     width: 50%;
-    /* Change the placement of the text by adding order: 1; */
+    order: 1;
   }
 
   .about-image {
     width: 50%;
-    /* Change the placement of the image by adding order: 2; */
+    order: 2;
   }
 
 }
@@ -263,5 +267,6 @@ footer img {
 
   .program p {
     /* Add flex-grow: 1; so that the extra space within the card is below the paragraph instead of below the link. */
+    flex-grow: 1;
   }
 }
